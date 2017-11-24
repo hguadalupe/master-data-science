@@ -1,5 +1,3 @@
 # My Repository
 
-Trying to edit my first git gocument.
-
-Well, it seems im doing well.
+Well, it seems im doing well.This document is awesome and pretty well writen.
