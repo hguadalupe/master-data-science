@@ -1,3 +1,36 @@
+    1  exit
+    2  dnf search liquidprompt
+    3  ls
+    4  df -h
+    5  sudo systemctl stop network.target
+    6  sudo systemctl stop postgresql.service
+    7  mount
+    8  sudo mount -o ro,remount /dev/mapper/fedora-root
+    9  ps aux | more
+   10  sudo systemctl stop NetworkManager.service 
+   11  sudo mount -o ro,remount /dev/mapper/fedora-root
+   12  sudo systemctl stop system-postgresql.slice
+   13  sudo mount -o ro,remount /dev/mapper/fedora-root
+   14  ps aux | more
+   15  sudo systemctl stop avahi-daemon.service
+   16  sudo systemctl stop firewalld.service
+   17  sudo dnf install zerofree
+   18  sudo mount -o ro,remount /dev/mapper/fedora-root
+   19  sudo systemctl stop rtkit-daemon.service
+   20  sudo mount -o ro,remount /dev/mapper/fedora-root
+   21  sudo killall dhclient
+   22  sudo mount -o ro,remount /dev/mapper/fedora-root
+   23  {lsof +L1; lsof | sed -n '/SYSV/d; /DEL\|(path /p;)}
+   24  {lsof +L1; lsof | sed -n '/SYSV/d; /DEL\|(path /p;'}
+   25  sudo systemctl stop kdm.service
+   26  sudo mount -o ro,remount /dev/mapper/fedora-root
+   27  sudo systemctl stop systemd-user-sessions.service
+   28  sudo mount -o ro,remount /dev/mapper/fedora-root
+   29  ps aux 
+   30  kill 2974
+   31  sudo kill 2974
+   32  sudo kill 2968
+   33  sudo mount -o ro,remount /dev/mapper/fedora-root
    34  sudo kill 4084
    35  ps
    36  ps aux
@@ -198,3 +231,19 @@
   231  hist
   232  history -100
   233  history -200
+  234  history -200 > History_of_commands.md
+  235  ls
+  236  add.
+  237  add. History_of_commands.md
+  238  add History_of_commands.md
+  239  less History_of_commands.md
+  240  ll
+  241  git add
+  242  git add .
+  243  git commit
+  244  git push
+  245  History -250
+  246  history -300
+  247  history > History_of_commands.md
+  248  cat History_of_commands.md
+  249  history -300
