@@ -247,3 +247,92 @@
   247  history > History_of_commands.md
   248  cat History_of_commands.md
   249  history -300
+  250  history -300 > History_of_commands.md
+  251  git add
+  252  git add.
+  253  git add .
+  254  git commit .
+  255  git push
+  256  cd
+  257  find -maxdepth 1 -mmin 300
+  258  echo find -maxdepth 1 -mmin 300
+  259  find .  -maxdepth 1 -mmin 300
+  260  find .  -maxdepth 5 -mmin 300
+  261  find ./  -maxdepth 5 -mmin 300
+  262  find -./  -maxdepth 5 -mmin 300
+  263  find . iname "Text*"
+  264  cat .history
+  265  blocksearch
+  266  cd Repositories/master-data-science
+  267  cd
+  268  cd Downloads
+  269  man mv
+  270  mv -t ../Repositories/OldStuff/Joy ./PDF_searcher.py PyFlashyroom.py rotating_bar.py tkinter4.py
+  271  alias 
+  272  blocksearch
+  273  man blocksearch
+  274  help blocksearch
+  275  mkdir ../Repositories/OldStuff/Joy
+  276  mkdir ./Repositories/OldStuff/Joy
+  277  mkdir ./Repositories/OldStuff
+  278  mkdir Repositories/OldStuff
+  279  cd
+  280  mkdir Repositories/OldStuff
+  281  mkdir ./Repositories/OldStuff/Joy
+  282  cd Downloads
+  283  mv -t ../Repositories/OldStuff/Joy ./PDF_searcher.py PyFlashyroom.py rotating_bar.py tkinter4.py
+  284  ls
+  285  cd
+  286  cd Repositories/OldStuff/Joy
+  287  ls
+  288  kwriter
+  289  kwrite
+  290  cd .. 
+  291  cd..
+  292  cd ..
+  293  cd master-data-science
+  294  cd
+  295  cd Repositories
+  296  cp ./Oldstuff ../Eraseoldstuff
+  297  cp ./OldStuff ../Eraseoldstuff
+  298  cp -r ./OldStuff ../Eraseoldstuff
+  299  cd
+  300  cd Repositories/master-data-science
+  301  git add .
+  302  git push
+  303  cd ..
+  304  git push .
+  305  cd OldStuff
+  306  git push
+  307  git push .
+  308  git pull
+  309  git pull .
+  310  cd
+  311  cd Repositories
+  312  cd Repositories/
+  313  git clone https://github.com/hguadalupe/OldStuff.git
+  314  rm -f OldStuff
+  315  rm OldStuff
+  316  rm -f -r OldStuff
+  317  git clone https://github.com/hguadalupe/OldStuff.git
+  318  ls
+  319  mv ../Eraseoldstuff ./OldStuff
+  320  ls
+  321  cd OldStuff
+  322  ls
+  323  mv -t ./ Eraseoldstuff/Joy Eraseoldstuff/Work
+  324  ls
+  325  ls Eraseoldstuff
+  326  cd Eraseoldstuff
+  327  ls
+  328  cd ..
+  329  rm -f -r Eraseoldstuff
+  330  ls
+  331  ls Work
+  332  cd Work
+  333  kwrite param_bulk_renamer.py
+  334  cd ..
+  335  cd master-data-science
+  336  ls
+  337  history
+  338  cat history
