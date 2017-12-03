@@ -1,0 +1,571 @@
+    3  ls
+    4  df -h
+    5  sudo systemctl stop network.target
+    6  sudo systemctl stop postgresql.service
+    7  mount
+    8  sudo mount -o ro,remount /dev/mapper/fedora-root
+    9  ps aux | more
+   10  sudo systemctl stop NetworkManager.service 
+   11  sudo mount -o ro,remount /dev/mapper/fedora-root
+   12  sudo systemctl stop system-postgresql.slice
+   13  sudo mount -o ro,remount /dev/mapper/fedora-root
+   14  ps aux | more
+   15  sudo systemctl stop avahi-daemon.service
+   16  sudo systemctl stop firewalld.service
+   17  sudo dnf install zerofree
+   18  sudo mount -o ro,remount /dev/mapper/fedora-root
+   19  sudo systemctl stop rtkit-daemon.service
+   20  sudo mount -o ro,remount /dev/mapper/fedora-root
+   21  sudo killall dhclient
+   22  sudo mount -o ro,remount /dev/mapper/fedora-root
+   23  {lsof +L1; lsof | sed -n '/SYSV/d; /DEL\|(path /p;)}
+   24  {lsof +L1; lsof | sed -n '/SYSV/d; /DEL\|(path /p;'}
+   25  sudo systemctl stop kdm.service
+   26  sudo mount -o ro,remount /dev/mapper/fedora-root
+   27  sudo systemctl stop systemd-user-sessions.service
+   28  sudo mount -o ro,remount /dev/mapper/fedora-root
+   29  ps aux 
+   30  kill 2974
+   31  sudo kill 2974
+   32  sudo kill 2968
+   33  sudo mount -o ro,remount /dev/mapper/fedora-root
+   34  sudo kill 4084
+   35  ps
+   36  ps aux
+   37  sudo kill 908
+   38  sudo kill 907
+   39  sudo systemctl stop polkit.service
+   40  sudo mount -o ro,remount /dev/mapper/fedora-root
+   41  ps aux 
+   42  sudo kill 745
+   43  sudo systemctl stop dbus.service
+   44  ps aux
+   45  sudo systemctl stop alsa-state.service
+   46  sudo kill 704
+   47  sudo mount -o ro,remount /dev/mapper/fedora-root
+   48  zerofree /dev/mapper/fedora-root
+   49  poweroff
+   50  sudo dnf install dolphin util-linux-user
+   51  cd Data
+   52  cd ..
+   53  cd Repositories
+   54  cd data-science-toolbox
+   55  cd ..
+   56  ł
+   57  pwd
+   58  git
+   59  git 
+   60  git clone https://github.com/hguadalupe/master-data-science.git
+   61  ls
+   62  cd master-data-science
+   63  ls
+   64  cat README.md
+   65  kwrite README.md
+   66  git status
+   67  git add
+   68  git add .
+   69  git commit
+   70  git push
+   71  cd
+   72  kwrite .git
+   73  kwrite .gitconfig
+   74  cd -
+   75  ls
+   76  git status
+   77  git log
+   78  git pull
+   79  git log
+   80  kwrite README.md
+   81  git add .
+   82  git commit -m "Ole, todo genial."
+   83  git status
+   84  git log
+   85  git push
+   86  git log
+   87  whoami
+   88  echo"holahola"
+   89  echo "comeon"
+   90  cd .
+   91  cd ..
+   92  cd 
+   93  whoami
+   94  cat Data/shell/Text_example.txt
+   95  cd .ssh
+   96  cd ..
+   97  cd .ssh
+   98  ls -a
+   99  ls-a
+  100  ls -a
+  101  history -5
+  102  history -10
+  103  cd
+  104  ll
+  105  alias
+  106  cd -
+  107  ~
+  108  cd ~
+  109  cd Repositories
+  110  cd master-data-science
+  111  ls
+  112  ll
+  113  CD ~
+  114  cd ~
+  115  mkdir
+  116  kdir dirprueba/subprueba/subsubprueba
+  117  kdir -p dirprueba/subprueba/subsubprueba
+  118  mkdir -p dirprueba/subprueba/subsubrpueba
+  119  touch dirprueba/texto.txt
+  120  cp dirprueba/texto.txt dirprueba/subprueba/texto2.txt
+  121  ls dirprueba
+  122  ls subprueba
+  123  ls dirprueba/subprueba
+  124  ll dirprueba
+  125  cp -r dirprueba dirprueba/subprueba/subsubprueba
+  126  cp -rp dirprueba durprueba/subprueba/subsubprueba ./
+  127  cp -rp dirprueba dirprueba/subprueba/subprueba ./
+  128  cp -rp ./dirprueba ./dirprueba/subprueba/subsubprueba
+  129  cp -r dirprueba ./dircopia
+  130  ls
+  131  rm dircopia
+  132  rm -f dircopia
+  133  rm -r dircopia
+  134  mkdir first_dir
+  135  touch firstdir/text_file.txt
+  136  cd first_dir
+  137  touch text_file.txt
+  138  chmod g+r,o+w text_file.txt
+  139  ll
+  140  chmod g+r,o+w text_file.txt
+  141  mkdir sub1
+  142  mkdir sub2
+  143  mkdir text_file
+  144  cp -r text_file.txt sub1/
+  145  ls sub 1
+  146  ls sub1
+  147  mv -p text_file.txt sub2/text_file.txt.2
+  148  mv text_file.txt sub2/text_file.txt.2
+  149  cp -r sub1 sub3
+  150  ls
+  151  mv sub3/text_file.txt sub3/text_file.txt.backup
+  152  ls sub3
+  153  mv sub3/text_file.txt.backup ../.text_file.txt.backup
+  154  ls
+  155  cd .
+  156  ls .
+  157  ls -a
+  158  mv ../.text_file.txt.backup ./.text_file.txt.backup
+  159  ls -a
+  160  man
+  161  man1
+  162  man 1
+  163  man CAT
+  164  cd ..
+  165  cd Data/
+  166  man less cad
+  167  less 
+  168  less shell/Finn.txt
+  169  less opentraveldata/optd_aircraft.csv
+  170  help tree
+  171  man tree
+  172  tree
+  173  cd
+  174  tree -L
+  175  man tree
+  176  tree -L 2
+  177  man less
+  178  fsd
+  179  fssfasdf f
+  180  f ef
+  181  sudo systemctl stop system-postgresql.slice
+  182  cd Data/shell
+  183  ls
+  184  cad -n Text_example.txt
+  185  cat -n Text_example.txt
+  186  cat -n Text_example.txt > Text_example_with_num.txt
+  187  cat Text_example_with_num.txt
+  188  cat Text_example_with_num.txt >>Text_example_with_num.txt
+  189  cat Text_example.txt >>Text_example_with_num.txt
+  190  cat Text_example_with_num.txt
+  191  cat -n Text_example.txt -n Text_example.txt >> Prueba_Concatena_Varios.txt
+  192  cat Prueba_Concatena_Varios.txt
+  193  ls
+  194  rm Prueba_Concatena_Varios.txt
+  195  rm Text_example_with_num.txt
+  196  ls
+  197  cd
+  198  cd Repositories
+  199  ls
+  200  cd
+  201  cd Data/shell
+  202  wc
+  203  cd Data/shell
+  204  cat Text_example.txt | wc 
+  205  cat Text_example.txt| head
+  206  cat -n Text_example.txt| head -15
+  207  cat -n Text_example.txt| head -3
+  208  cat -n Text_example.txt| tail -3  head -3 
+  209  cat -n Text_example.txt| tail 3  head -3 
+  210  cat -n Text_example.txt | tail 3  head -3 
+  211  cat -n Text_example.txt | tail -n 3  head -3 
+  212  cat -n Text_example.txt | tail -n 1  head -3 
+  213  cat -n Text_example.txt | tail -n 1 
+  214  cat -n Text_example.txt | tail -n 2 
+  215  cat -n Text_example.txt | tail 2 
+  216  cat -n Text_example.txt | tail -2 
+  217  cat -n Text_example.txt | head -2  tail -2 
+  218  cat -n Text_example.txt | head -3 
+  219  cat -n Text_example.txt | head -n -3 
+  220  cat -n Text_example.txt | head 3 
+  221  cat -n Text_example.txt | head -n 3 -n/c 3
+  222  cat -n Text_example.txt | head -n 3 | tail -2
+  223  cat -n Text_example.txt
+  224  cat -n Text_example.txt | head -n 3 | tail -n-3
+  225  cat -n Text_example.txt | head -n +3 | tail -n -3
+  226  cat -n Text_example.txt | tail -n +3 | head -n -3
+  227  cd
+  228  ls Data/shell
+  229  ls Repositories/master-data-science
+  230  cd Repositories/master-data-science
+  231  hist
+  232  history -100
+  233  history -200
+  234  history -200 > History_of_commands.md
+  235  ls
+  236  add.
+  237  add. History_of_commands.md
+  238  add History_of_commands.md
+  239  less History_of_commands.md
+  240  ll
+  241  git add
+  242  git add .
+  243  git commit
+  244  git push
+  245  History -250
+  246  history -300
+  247  history > History_of_commands.md
+  248  cat History_of_commands.md
+  249  history -300
+  250  history -300 > History_of_commands.md
+  251  git add
+  252  git add.
+  253  git add .
+  254  git commit .
+  255  git push
+  256  cd
+  257  find -maxdepth 1 -mmin 300
+  258  echo find -maxdepth 1 -mmin 300
+  259  find .  -maxdepth 1 -mmin 300
+  260  find .  -maxdepth 5 -mmin 300
+  261  find ./  -maxdepth 5 -mmin 300
+  262  find -./  -maxdepth 5 -mmin 300
+  263  find . iname "Text*"
+  264  cat .history
+  265  blocksearch
+  266  cd Repositories/master-data-science
+  267  cd
+  268  cd Downloads
+  269  man mv
+  270  mv -t ../Repositories/OldStuff/Joy ./PDF_searcher.py PyFlashyroom.py rotating_bar.py tkinter4.py
+  271  alias 
+  272  blocksearch
+  273  man blocksearch
+  274  help blocksearch
+  275  mkdir ../Repositories/OldStuff/Joy
+  276  mkdir ./Repositories/OldStuff/Joy
+  277  mkdir ./Repositories/OldStuff
+  278  mkdir Repositories/OldStuff
+  279  cd
+  280  mkdir Repositories/OldStuff
+  281  mkdir ./Repositories/OldStuff/Joy
+  282  cd Downloads
+  283  mv -t ../Repositories/OldStuff/Joy ./PDF_searcher.py PyFlashyroom.py rotating_bar.py tkinter4.py
+  284  ls
+  285  cd
+  286  cd Repositories/OldStuff/Joy
+  287  ls
+  288  kwriter
+  289  kwrite
+  290  cd .. 
+  291  cd..
+  292  cd ..
+  293  cd master-data-science
+  294  cd
+  295  cd Repositories
+  296  cp ./Oldstuff ../Eraseoldstuff
+  297  cp ./OldStuff ../Eraseoldstuff
+  298  cp -r ./OldStuff ../Eraseoldstuff
+  299  cd
+  300  cd Repositories/master-data-science
+  301  git add .
+  302  git push
+  303  cd ..
+  304  git push .
+  305  cd OldStuff
+  306  git push
+  307  git push .
+  308  git pull
+  309  git pull .
+  310  cd
+  311  cd Repositories
+  312  cd Repositories/
+  313  git clone https://github.com/hguadalupe/OldStuff.git
+  314  rm -f OldStuff
+  315  rm OldStuff
+  316  rm -f -r OldStuff
+  317  git clone https://github.com/hguadalupe/OldStuff.git
+  318  ls
+  319  mv ../Eraseoldstuff ./OldStuff
+  320  ls
+  321  cd OldStuff
+  322  ls
+  323  mv -t ./ Eraseoldstuff/Joy Eraseoldstuff/Work
+  324  ls
+  325  ls Eraseoldstuff
+  326  cd Eraseoldstuff
+  327  ls
+  328  cd ..
+  329  rm -f -r Eraseoldstuff
+  330  ls
+  331  ls Work
+  332  cd Work
+  333  kwrite param_bulk_renamer.py
+  334  cd ..
+  335  cd master-data-science
+  336  ls
+  337  history
+  338  cat history
+  339  history -350 > History_of_commands.md
+  340  git add .
+  341  git commit
+  342  git push
+  343  cd ..
+  344  cd OldStuff
+  345  add 
+  346  git add .
+  347  git commit .
+  348  git push
+  349  sudo -i
+  350  cd data-science-toolbox
+  351  cd Repositories
+  352  cd
+  353  find *.txt | head 10
+  354  find *.txt | head
+  355  find ~ -type f -size +10M -exec ls -s {} | wc
+  356  find ~ -type f -size +10M -exec ls -s {} \ | wc
+  357  find ~ -type f -size +10M -exec ls -s {} \; | wc
+  358  find ~ -type f -size +30M -exec ls -s {} \; | wc
+  359  cd mkdir ejercicios
+  360  mkdir ejercicios
+  361  cd ejercicios
+  362  seq15> 20lines.txt
+  363  seq 15> 20lines.txt
+  364  seq 9 >> 20lines.txt
+  365  cat 20lines.txt
+  366  echo"20/n20">>20lines.txt
+  367  echo "20/n20">>20lines.txt
+  368  cat 20lines.txt
+  369  sort -d
+  370  sort 20lines.txt
+  371  sort -d  20lines.txt
+  372  sort -n 20lines.txt
+  373  sort -nu 20lines.txt
+  374  seq 20 > 20.txt
+  375  cat 20.txt
+  376  cat 20.txt | wc
+  377  20.txt | wc
+  378  wc < 20.txt
+  379  cd
+  380  cd Data/opentraveldata
+  381  cat optd_aircraft.csv | head
+  382  sort -t"^" optd_aircraft.csv
+  383  sort -t"^" -k1,1 optd_aircraft.csv | head
+  384  sort -t"^^" -k1,1 optd_aircraft.csv | head
+  385  head -1 optd_por_public.csv| tr " "/n" | wc\ncd ..\ncat optd_aircraft.csv | head\n
+  386  paste < (seq 46) < head -1 optd_por_public.csv | tr "2
+  387  paste <(seq 46) <(head -1 optd_por_public.csv | tr "^" "/n"
+  388  paste <(seq 46) <(head -1 optd_por_public.csv | tr "^" "/n")
+  389  cd
+  390  cd Data/opentraveldata
+  391  grep "7/d7" "3/d/d" -n optd_aircraft.csv
+  392  grep -E "7/d7" "3/d/d" -n optd_aircraft.csv
+  393  grep -E "7[0-9]7|3[0-9][0-9]" -n "optd_aircraft.csv"
+  394  cd
+  395  find -name Text_example.txt -type f 
+  396  cd Data/shell
+  397  cat Text_example.txt
+  398  cp Text_example.txt Text_ex2.txt
+  399  ls
+  400  sed "s/ /line/\n/g" Text_ex2.txt
+  401  sed "/line/\n/g" Text_ex2.txt
+  402  sed /line/\n/g Text_ex2.txt
+  403  sed -e /line/\n/g Text_ex2.txt
+  404  sed s/line/\n/g Text_ex2.txt
+  405  sed s/n/\line/g Text_ex2.txt
+  406  sed s/lilinee/line/g Text_ex2.txt
+  407  sed s/line/\n/g Text_ex2.txt
+  408  sed s/n/line/g Text_ex2.txt
+  409  sed s/lilinee/line/g Text_ex2.txt
+  410  cd
+  411  kwrite
+  412  kwrite &
+  413  cd ejercicios
+  414  ./culim_number.sh
+  415  cmod
+  416  chmod a 777 culim_number.sh 
+  417  chmod culim_number.sh 
+  418  chmod 777 culim_number.sh 
+  419  ./culim_number.sh
+  420  ./culim_number.sh "../dirprueba/texto.txt"
+  421  cd
+  422  mkdir ./myscripts
+  423  mv ejercicios/culim_number.sh myscripts
+  424  ls myscripts
+  425  PATH=myscripts:${PATH}
+  426  echo $PATH
+  427  echo $PATH | tr : "\n"
+  428  history -600
+  429  history -427 > ./Repositories/master-data-science/hist_20171202.txt
+  430  cd Repositories/master-data-science
+  431  git pull
+  432  git add .
+  433  git commit .
+  434  git push
+  435  cd
+  436  kcsvlook -d "^" ./Data/opentraveldata
+  437  csvlook -d "^" ./Data/opentraveldata/optd_aircraft.csv | less -S
+  438  csvsql -d "^" ./Data/opentraveldata/optd_aircraft.csv
+  439  psql
+  440  pwd
+  441  psql
+  442  sudo dnf install wget
+  443  wget
+  444  wget https://raw.githubusercontent.com/masterdatascience/postgres/master/my_ldin_contacts.csv
+  445  wget https://raw.githubusercontent.com/masterdatascience/postgres/master/my_fb_friends.csv
+  446  psql
+  447  ls
+  448  psql
+  449  echo "drop table if exists linkedin;" > ./psql_create_lkin.sql
+  450  cat ./psql_create_lkin.sql
+  451  echo "create table linkedin" > ./psql_create_lkin.sql
+  452  cat ./psql_create_lkin.sql
+  453  echo "drop table if exists linkedin;" > ./psql_create_lkin.sql
+  454  echo "create table linkedin" >> ./psql_create_lkin.sql
+  455  cat ./psql_create_lkin.sql
+  456  echo "drop table if exists linkedin;/ncreate table linkedin;" > ./psql_create_lkin.sql
+  457  cat ./psql_create_lkin.sql
+  458  echo "drop table if exists linkedin; /n create table linkedin;" > ./psql_create_lkin.sql
+  459  cat ./psql_create_lkin.sql
+  460  echo "drop table if exists linkedin;" > ./psql_create_lkin.sql
+  461  echo "create table table linkedin;" >> ./psql_create_lkin.sql
+  462  cat ./psql_create_lkin.sql
+  463  echo "create table table linkedin(nombre varchar,edad int,email varchar);" >> ./psql_create_lkin.sql
+  464  psql ./psql_create_lkin.sql
+  465  cd Data/opentraveldata/
+  466  csvlook -d "^" optd_aircraft.csv | head
+  467  csvlook -d "^" optd_aircraft.csv | less -S
+  468  cd
+  469  ls
+  470  Downloads < mv my_fb_friends.csv my_ldin_contacts.csv
+  471  Downloads | mv my_fb_friends.csv my_ldin_contacts.csv
+  472  Downloads < my_fb_friends.csv my_ldin_contacts.csv
+  473  ls Downloads
+  474  mkdir ./Downloads/csvs
+  475  mv -t ./Downloads/csvs my_ldin_contacts.csv my_ldin_contacts.csv
+  476  ls Downloads/csvs
+  477  ls Downloads
+  478  find -name my_fb_friends.csv -maxdepth 2
+  479  find -maxdepth 2 -name my_fb_friends.csv
+  480  echo find -maxdepth 2 -name my_fb_friends.csv
+  481  cat find -maxdepth 2 -name my_fb_friends.csv
+  482  find ~ -maxdepth 2 -name my_fb_friends.csv
+  483  find ~ -maxdepth 2 -type f -name my_fb_friends.csv
+  484  find ~ -maxdepth 2 -type f -name my_fb_friends.csv -exec whereis
+  485  find ~ -maxdepth 2 -type f -name my_fb_friends.csv -exec pwd
+  486  find ~ -maxdepth 2 -type f -name my_fb_friends.csv -exec whereis my_fb_friends.csv
+  487  find ~ -maxdepth 2 -type f -name my_fb_friends.csv -exec pwd my_fb_friends.csv
+  488  find ~ -maxdepth 3 -type f -name my_fb_friends.csv -exec pwd my_fb_friends.csv
+  489  find ~ -maxdepth 3 -type f -name my_fb_friends.csv -print
+  490  find / -maxdepth 3 -type f -name my_ldin_contacts.csv -print
+  491  find / -maxdepth 2 -type f -name my_ldin_contacts.csv -print
+  492  find / -maxdepth 2 -type f -name my_ldin_contacts.csv
+  493  find / -maxdepth 2 -type f -name my_ldin_contacts.csv | whereis
+  494  find / -maxdepth 2 -type f -name my_ldin_contacts.csv -l
+  495  find / -maxdepth 3 -type f -name my_ldin_contacts.csv -l
+  496  whereis [options]
+  497  find / -maxdepth 3 -type f -name my_ldin_contacts.csv -l
+  498  find / -maxdepth 3 -type f -name my_ldin_contacts.csv | whereis -l
+  499  find ~ -maxdepth 3 -type f -name my_ldin_contacts.csv | whereis -l
+  500  find ~ -maxdepth 3 -type f -name my_ldin_contacts.csv /
+  501  find .
+  502  find -name my_fb_friends.csv -maxdepth 2
+  503  find -name "my_fb_friends.csv" -maxdepth 2
+  504  find . -name "my_fb_friends.csv" -maxdepth 2
+  505  find . -maxdepth 2 -name "my_fb_friends.csv"
+  506  find . -type f -maxdepth 2 -name "my_fb_friends.csv"
+  507  find . -maxdepth 2 -type f -name "my_fb_friends.csv"
+  508  find . -maxdepth 3 -type f -name "my_fb_friends.csv"
+  509  find . -maxdepth 3 -type f -name "my_fb_friends.csv*"
+  510  find . -maxdepth 4 -type f -name "my_fb_friends.csv*"
+  511  find . -maxdepth 5 -type f -name "my_fb_friends.csv*"
+  512  cd Downloads/csvs
+  513  ls
+  514  find . -maxdepth 3 -type f -name "my_ldin_contacts.csv"
+  515  cd
+  516  find . -maxdepth 3 -type f -name "my_ldin_contacts.csv"
+  517  find . -maxdepth 3 -type f -name "*.csv"
+  518  psql
+  519  sudo adduser datascientist vboxsf
+  520  sudo adduser Data Scientist vboxsf
+  521  sudo aduser -Z
+  522  sudo seuser
+  523  sudo SEUSER
+  524  SEUSER
+  525  -Z
+  526  adduser -D
+  527  cd Repositories/master-data-science
+  528  git pull .
+  529  cd ..
+  530  cd OldStuff
+  531  git pull .
+  532  ls
+  533  find -maxdepth 2 -type f 
+  534  find ./ -maxdepth 2 -type f 
+  535  git pull .
+  536  find ./ -maxdepth 2 -type f 
+  537  cd Work
+  538  ls
+  539  qit pull .
+  540  git pull .
+  541  ls
+  542  git pull .
+  543  ls
+  544  cd Repositories/OldStuff/Work
+  545  git pull .
+  546  ls
+  547  cd ..
+  548  cd OldStuff
+  549  git pull .
+  550  find ./ -maxdepth 3 -type f 
+  551  find ./ -maxdepth 3 -type f -name "*.CSV"
+  552  find ./ -maxdepth 3 -type f -name "*.py"
+  553  git pull
+  554  find ./ -maxdepth 3 -type f -name "*.CSV"
+  555  cd Work
+  556  csvlook -d Tabla2.CSV -S
+  557  csvlook -d ¨¨¨ Tabla2.CSV | less -S
+  558  csvlook -d ¨¨¨ Tabla2.CSV | head
+  559  csvlook -d ¨^¨ Tabla2.CSV | head
+  560  git pull
+  561  csvlook -d ¨^¨ Tabla3.CSV | less -S
+  562  csvlook -d ¨ ¨ Tabla3.CSV | less -S
+  563  ls
+  564  csvlook -d "^" 111.txt | less -S
+  565  cd ../..
+  566  cd master-data-science
+  567  ls
+  568  mkdir Hist_cmd
+  569  mv -t Hist_cmd hist_20171202.txt History_of_commands.md
+  570  ls
+  571  cd Hist_cmd
+  572  history -600
+  573  hist -571 >> hist_20171203.txt
