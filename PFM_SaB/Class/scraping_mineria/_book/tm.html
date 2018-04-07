@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Scraping y Text mining con R</title>
+  <meta name="description" content="Scraping y Text mining con R">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Scraping y Text mining con R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Scraping y Text mining con R" />
+  
+  
+  
+
+<meta name="author" content="Olivier Nuñez">
+
+
+<meta name="date" content="2018-01-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="scraping-con-r.html">
+<link rel="next" href="referencias.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preámbulo</a></li>
+<li class="chapter" data-level="1" data-path="scraping-con-r.html"><a href="scraping-con-r.html"><i class="fa fa-check"></i><b>1</b> Scraping con R</a><ul>
+<li class="chapter" data-level="1.1" data-path="scraping-con-r.html"><a href="scraping-con-r.html#que-se-puede-rascar-de-la-web"><i class="fa fa-check"></i><b>1.1</b> Qué se puede “rascar” de la web?</a></li>
+<li class="chapter" data-level="1.2" data-path="scraping-con-r.html"><a href="scraping-con-r.html#formato-html"><i class="fa fa-check"></i><b>1.2</b> Formato HTML</a></li>
+<li class="chapter" data-level="1.3" data-path="scraping-con-r.html"><a href="scraping-con-r.html#identificar-elementos-de-interes-en-una-pagina"><i class="fa fa-check"></i><b>1.3</b> Identificar elementos de interés en una página</a></li>
+<li class="chapter" data-level="1.4" data-path="scraping-con-r.html"><a href="scraping-con-r.html#el-paquete-rvest"><i class="fa fa-check"></i><b>1.4</b> El paquete <code>rvest</code></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="scraping-con-r.html"><a href="scraping-con-r.html#cargar-la-pagina"><i class="fa fa-check"></i><b>1.4.1</b> Cargar la pagina</a></li>
+<li class="chapter" data-level="1.4.2" data-path="scraping-con-r.html"><a href="scraping-con-r.html#extraccion"><i class="fa fa-check"></i><b>1.4.2</b> Extracción</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="scraping-con-r.html"><a href="scraping-con-r.html#navegacion"><i class="fa fa-check"></i><b>1.5</b> Navegación</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="scraping-con-r.html"><a href="scraping-con-r.html#inicion-de-la-navegacion"><i class="fa fa-check"></i><b>1.5.1</b> Inición de la navegación</a></li>
+<li class="chapter" data-level="1.5.2" data-path="scraping-con-r.html"><a href="scraping-con-r.html#funciones-jump_to-y-follow_link"><i class="fa fa-check"></i><b>1.5.2</b> Funciones <code>jump_to</code> y <code>follow_link</code></a></li>
+<li class="chapter" data-level="1.5.3" data-path="scraping-con-r.html"><a href="scraping-con-r.html#html_formsesion"><i class="fa fa-check"></i><b>1.5.3</b> html_form(sesion)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="scraping-con-r.html"><a href="scraping-con-r.html#json-y-xml"><i class="fa fa-check"></i><b>1.6</b> JSON y XML</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tm.html"><a href="tm.html"><i class="fa fa-check"></i><b>2</b> tm</a></li>
+<li class="chapter" data-level="3" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>3</b> Referencias</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Scraping y Text mining con R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tm" class="section level1">
+<h1><span class="header-section-number">2</span> tm</h1>
+<p>Internet es una fuente inagotable de información y datos. Desafortunadamente, la mayoría de las veces, los datos están integrados a una pagina web y no pueden ser extraidos directamente para su análisis estadístico.</p>
+<p>Cuando el volumen de datos es pequeño, es posible copiarlos “a mano”. Pero si la cantidad de datos es demasiado grande o si están dispersos en un gran número de páginas, este método no es factible.</p>
+<p>Esta introducción al <strong>scraping</strong> tiene como objetivo explicar cómo extraer esta información utilizando herramientas de R y mostrar algunas operaciones comunes de procesamiento de datos para poder analizarlos.</p>
+<p>Esta sessión consta de tres partes:</p>
+<ol style="list-style-type: decimal">
+<li>Funciones del paquete rvest</li>
+<li>Ejemplo de extracción</li>
+<li>Datos estructurados</li>
+</ol>
+<p>Todo lo que sigue requiere el paquete “rvest”:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mfield&lt;-<span class="kw">read_html</span>(<span class="st">&quot;https://es.wikipedia.org/wiki/Medalla_Fields&quot;</span>)
+mfield %&gt;%<span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;table&quot;</span>) </code></pre></div>
+<pre><code>## {xml_nodeset (2)}
+## [1] &lt;table class=&quot;infobox&quot; style=&quot;width:22.7em; line-height: 1.4em; text ...
+## [2] &lt;table class=&quot;wikitable&quot; border=&quot;1&quot;&gt;\n&lt;tr&gt;\n&lt;th&gt;Año&lt;/th&gt;\n&lt;th&gt;Medall ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tabla &lt;-<span class="st"> </span>mfield %&gt;%<span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;table&quot;</span>) %&gt;%<span class="st"> </span>.[[<span class="dv">2</span>]] %&gt;%<span class="st"> </span><span class="kw">html_table</span>(<span class="dt">header=</span><span class="ot">TRUE</span>)
+knitr:::<span class="kw">kable</span>(tabla %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">10</span>))</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Año</th>
+<th align="left">Medallistas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1936</td>
+<td align="left">Lars Ahlfors ( Finlandia), Universidad Harvard</td>
+</tr>
+<tr class="even">
+<td align="right">1936</td>
+<td align="left">Jesse Douglas ( Estados Unidos), Instituto Tecnológico de Massachusetts</td>
+</tr>
+<tr class="odd">
+<td align="right">1950</td>
+<td align="left">Laurent Schwartz ( Francia), Universidad de Nancy</td>
+</tr>
+<tr class="even">
+<td align="right">1950</td>
+<td align="left">Atle Selberg (Noruega), Instituto de Estudios Avanzados de Princeton</td>
+</tr>
+<tr class="odd">
+<td align="right">1954</td>
+<td align="left">Kunihiko Kodaira ( Japón), Universidad de Princeton</td>
+</tr>
+<tr class="even">
+<td align="right">1954</td>
+<td align="left">Jean-Pierre Serre ( Francia), Universidad de París</td>
+</tr>
+<tr class="odd">
+<td align="right">1958</td>
+<td align="left">Klaus Friedrich Roth ( Reino Unido), Universidad de Londres</td>
+</tr>
+<tr class="even">
+<td align="right">1958</td>
+<td align="left">René Thom ( Francia), Universidad de Estrasburgo</td>
+</tr>
+<tr class="odd">
+<td align="right">1962</td>
+<td align="left">Lars V. Hörmander (Suecia), Universidad de Estocolmo</td>
+</tr>
+<tr class="even">
+<td align="right">1962</td>
+<td align="left">John Willard Milnor ( Estados Unidos), Universidad de Princeton</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="scraping-con-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["ScrapingConR.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
