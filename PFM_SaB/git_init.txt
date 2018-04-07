@@ -1,0 +1,129 @@
+git clone https://github.com/hguadalupe/master-data-science.git   
+
+J.H@Metalito MINGW64 ~/master-data-science
+$ cd ..
+
+J.H@Metalito MINGW64 ~
+git init (en el archivo)
+
+
+$ cd PFM_SAB/
+
+J.H@Metalito MINGW64 ~/PFM_SAB (master)
+$ ls
+master-data-science/
+
+J.H@Metalito MINGW64 ~/PFM_SAB (master)
+$ cd master-data-science/
+
+J.H@Metalito MINGW64 ~/PFM_SAB/master-data-science (master)
+$ git add .
+warning: CRLF will be replaced by LF in PFM_SaB/DBs/Linkedin_searches.csv.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/DBs/Repositorio.csv.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/DBs/Software_BIM.csv.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/DBs/Warnings.csv.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/Dynamo/20180307_RosaDeLosVientos_SAB/20180307_RosaDeLosVientos_SAB.dyn.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/Dynamo/rosasDeLosVientos_3.dyn.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/Eval_software/Test_stats.R.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/Nube_palabras/sab.txt.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/Repositorio_csv.csv.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/lines.html.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/stacked_bar.html.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in PFM_SaB/warnings_csv.csv.
+The file will have its original line endings in your working directory.
+
+J.H@Metalito MINGW64 ~/PFM_SAB/master-data-science (master)
+$ git commit -m "adding project progress"
+[master fb857af] adding project progress
+ 67 files changed, 12830 insertions(+)
+ create mode 100644 PFM_SaB/.ipynb_checkpoints/1_BIM_Software-checkpoint.ipynb
+ create mode 100644 PFM_SaB/.ipynb_checkpoints/2_Lkdin_research-checkpoint.ipynb
+ create mode 100644 PFM_SaB/.ipynb_checkpoints/z_Trying_PySAB_1-checkpoint.ipynb
+ create mode 100644 PFM_SaB/1_BIM_Software.ipynb
+ create mode 100644 PFM_SaB/2_Lkdin_research.ipynb
+ create mode 100644 PFM_SaB/DBs/Borra.ods
+ create mode 100644 PFM_SaB/DBs/Linkedin_searches.csv
+ create mode 100644 PFM_SaB/DBs/Repositorio.csv
+ create mode 100644 PFM_SaB/DBs/Software_BIM.csv
+ create mode 100644 PFM_SaB/DBs/Software_BIM.ods
+ create mode 100644 PFM_SaB/DBs/Thumbs.db
+ create mode 100644 PFM_SaB/DBs/Warnings.csv
+ create mode 100644 PFM_SaB/DBs/eval_software.ods
+ create mode 100644 PFM_SaB/Dynamo/20180307_RosaDeLosVientos_SAB.rar
+ create mode 100644 PFM_SaB/Dynamo/20180307_RosaDeLosVientos_SAB/20180307_RosaDeLosVientos_SAB.dyn
+ create mode 100644 PFM_SaB/Dynamo/20180307_RosaDeLosvientos.0001.rvt
+ create mode 100644 PFM_SaB/Dynamo/20180307_RosaDeLosvientos.rvt
+ create mode 100644 PFM_SaB/Dynamo/rosasDeLosVientos_3.dyn
+ create mode 100644 PFM_SaB/Eval_software/Test_stats.R
+ create mode 100644 "PFM_SaB/Modelo_presupuesto_Construcc/Explicaci\303\263n datos.odt"
+ create mode 100644 PFM_SaB/Modelo_presupuesto_Construcc/MakingDF.ipynb
+ create mode 100644 PFM_SaB/Nube_palabras/.ipynb_checkpoints/TagCloud Salto al BIM-checkpoint.ipynb
+ create mode 100644 "PFM_SaB/Nube_palabras/.~lock.SALTO AL BIM_F\303\255sico5.odt#"
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB.png
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB2_buena.png
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB3.png
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB4.png
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB5.png
+ create mode 100644 PFM_SaB/Nube_palabras/Nube_Tags_SaB6_buena.png
+ create mode 100644 "PFM_SaB/Nube_palabras/SALTO AL BIM_F\303\255sico5.odt"
+ create mode 100644 PFM_SaB/Nube_palabras/TagCloud Salto al BIM.ipynb
+ create mode 100644 PFM_SaB/Nube_palabras/sab.txt
+ create mode 100644 PFM_SaB/Repositorio_csv.csv
+ create mode 100644 PFM_SaB/eval_software.xlsx
+ create mode 100644 PFM_SaB/lines.html
+ create mode 100644 PFM_SaB/lines_frames/Thumbs.db
+ create mode 100644 PFM_SaB/lines_frames/frame0000000.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000001.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000002.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000003.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000004.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000005.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000006.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000007.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000008.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000009.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000010.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000011.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000012.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000013.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000014.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000015.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000016.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000017.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000018.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000019.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000020.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000021.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000022.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000023.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000024.png
+ create mode 100644 PFM_SaB/lines_frames/frame0000025.png
+ create mode 100644 PFM_SaB/myapp.py
+ create mode 100644 PFM_SaB/stacked_bar.html
+ create mode 100644 PFM_SaB/warnings_csv.csv
+ create mode 100644 PFM_SaB/z_Trying_PySAB_1.ipynb
+ create mode 100644 prueba.txt
+
+J.H@Metalito MINGW64 ~/PFM_SAB/master-data-science (master)
+$ git push
+Counting objects: 73, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (72/72), done.
+Writing objects: 100% (73/73), 9.52 MiB | 250.00 KiB/s, done.
+Total 73 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+To https://github.com/hguadalupe/master-data-science.git
+   74f452d..fb857af  master -> master
+
+J.H@Metalito MINGW64 ~/PFM_SAB/master-data-science (master)
