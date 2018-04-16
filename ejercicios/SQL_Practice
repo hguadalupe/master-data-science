@@ -1,0 +1,48 @@
+# SQL Practicing:
+
+SELECT * FROM customers 
+WHERE state = 'CA' AND  city = 'Hollywood';
+ 
+SELECT name, state, city FROM customers 
+WHERE state = 'CA' OR city = 'Boston';
+
+SELECT * FROM customers
+WHERE (id = 1  OR id = 2)
+AND city = 'Boston';
+
+SELECT *  FROM users
+WHERE state = 'NY' OR state = 'CA';
+
+SELECT name, state FROM customers 
+WHERE state IN  ('CA', 'NY', 'NC');
+
+SELECT name, state FROM customers
+WHERE state  NOT IN ('CA', 'NY');
+
+SELECT  CONCAT (city, ', ', state) AS new_address 
+FROM customers;
+
+SELECT Salary, SQRT(Salary) 
+FROM employees;
+
+SELECT FirstName, Salary FROM employees 
+WHERE  Salary > 3100
+ORDER BY Salary DESC;
+
+SELECT * FROM items 
+WHERE cost > (SELECT  AVG(cost) FROM  items);
+
+SELECT seller_id FROM items
+WHERE name  LIKE  '%boxes';
+
+SELECT name,  MIN(cost) 
+FROM items WHERE name 
+LIKE '%boxes of frogs' AND seller_id  IN (68, 6, 18);
+
+SELECT name, age FROM students
+WHERE age > (SELECT  AVG(age) FROM students);
+
+
+SELECT customers.name, items.name
+FROM customers LEFT  OUTER JOIN items 
+ON customers.id=seller_id;
