@@ -1,0 +1,52 @@
+﻿ALEMENTOS QUE MODIFICA,APLICACIONES,Column10,Column11,Column12,Column13,Column14,Column15,Column16,Column17,Column18,Column19,Column20,Column21,Column22,Column23,Column24,Column25,Column26,Column27,PROCESO QUE REALIZA,VERSIÓN PARA LA QUE ES VÁLIDA,2014,2015,2016,2017,USO RECOMENDADO
+ADVERTENCIAS,Archisoft Isolate Warnings,,,,,,,,,,,,,,,,,,,VISUALIZAR,2014 2015  2016,1,1,1,0,90
+ARCHIVOS Y VINCULADOS,Etransmit for revit,,,,,,,,,,,,,,,,,,,GUARDAR,2014 2015  2017,1,1,0,1,100
+CAD,IMPORTED LINE PATTNER REMOVER,,,,,,,,,,,,,,,,,,,ELIMINAR,2014 2015  2016,1,1,1,0,80
+CAD,RevitonicPurgeCADPatterns,,,,,,,,,,,,,,,,,,,ELIMINAR,2014 2015  2016,1,1,1,0,80
+CAJA DE SECCIÓN,"Auto Section BOX 
+(COINS)",,,,,,,,,,,,,,,,,,,VISUALIZAR,2014 2015  2016 2017,1,1,1,1,100
+CAJA DE SECCIÓN,Revibox,,,,,,,,,,,,,,,,,,,VISUALIZAR,2014,1,0,0,0,80
+CIS/2,CIS2ImportExport2014,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014,1,0,0,0,80
+COORDENADAS,HyderConsultingXYZCoordinates,,,,,,,,,,,,,,,,,,,GESTIONAR,2014 2015  2016,1,1,1,0,80
+COTAS,Easy Dimension,,,,,,,,,,,,,,,,,,,MODELAR,2014 2015  2016,1,1,1,0,70
+ELEMENTOS,remove duplicate elements warnings,,,,,,,,,,,,,,,,,,,ELIMINAR,2014 2015,1,1,0,0,80
+ELEMENTOS,Select Intersecting Elements,,,,,,,,,,,,,,,,,,,FILTRAR,2014,1,0,0,0,60
+ETIQUETABLES,Renumber Elements,,,,,,,,,,,,,,,,,,,NUMERAR,2014 2015  2016,1,1,1,0,80
+EXCEL,BIM Coder,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014 2015  2016,1,1,1,0,80
+EXCEL,BIM CONNECTION,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014 2015  2016,1,1,1,0,80
+FAMILIAS,Civil Structures,,,,,,,,,,,,,,,,,,,MODELAR,2014 2015,1,1,0,0,90
+FAMILIAS,Detail Filter,,,,,,,,,,,,,,,,,,,FILTRAR,2014 2015  2016,1,1,1,0,90
+FAMILIAS,RQuick Select,,,,,,,,,,,,,,,,,,,FILTRAR,2014 2015  2016,1,1,1,0,90
+FAMILIAS,Sofistik BimTools,,,,,,,,,,,,,,,,,,,MODELAR,2014 2015,1,1,0,0,70
+FROM ROOM,RDBK Flipper,,,,,,,,,,,,,,,,,,,CAMBIAR,2014 2015  2016,1,1,1,0,60
+KEY NOTES,Keynote Reporter,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014,1,0,0,0,80
+LEYENDAS,"Legend & Schedule Copy 2015
+(LMN)",,,,,,,,,,,,,,,,,,,DUPLICAR,2014 2015  2016,1,1,1,0,90
+PARÁMETROS,Custom Parameters,,,,,,,,,,,,,,,,,,,GESTIONAR,2014,1,0,0,0,100
+PARÁMETROS,Parameter Jerk,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014,1,0,0,0,80
+PARÁMETROS,Revit Shared Parameter File,,,,,,,,,,,,,,,,,,,MANIPULAR,2014 2015  2016,1,1,1,0,80
+PARÁMETROS,Rvt Parameter Organizer,,,,,,,,,,,,,,,,,,,GESTIONAR,2014 2015  2016,1,1,1,0,100
+PDF 3D,Blue Beam,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014 2015  2016,1,1,1,0,100
+PÓRTICOS,FrameGenerator2014,,,,,,,,,,,,,,,,,,,MODELAR,2014 2015,1,1,0,0,80
+PROYECTOS,Bim Collab,,,,,,,,,,,,,,,,,,,COORDINAR,2014 2015  2016,1,1,1,0,60
+PUERTAS VENTANAS,Redbike Systems PtyLtdRDBK Auto Number FREE,,,,,,,,,,,,,,,,,,,NUMERAR,2014 2015  2016,1,1,1,0,80
+REVIT A LUMION,Revit to Lumion,,,,,,,,,,,,,,,,,,,EXPORTAR,2014 2015  2016 2017,1,1,1,1,80
+TEKLA,Import From Tekla to Revit,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014 2015  2016,1,1,1,0,90
+USUARIOS,Worksharing Monitor,,,,,,,,,,,,,,,,,,,GESTIONAR,2014 2015  2017,1,1,0,1,90
+VARIEDAD,Bim One,,,,,,,,,,,,,,,,,,,VARIEDAD,2014 2015  2016,1,1,1,0,90
+VARIEDAD,"Bonus Tools
+(kiwiCodes Solutions)",,,,,,,,,,,,,,,,,,,VARIEDAD,2014 2015  2016 2017,1,1,1,1,100
+VARIEDAD,Case Apps,,,,,,,,,,,,,,,,,,,VARIEDAD,2014 2015  2016,1,1,1,0,100
+VARIEDAD,Dynamo,,,,,,,,,,,,,,,,,,,VARIEDAD,2014 2015  2016 2017,1,1,1,1,100
+VARIEDAD,RVT Xporter Pro,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2014 2015  2016,1,1,1,0,90
+AREAS,Area Book Extension,,,,,,,,,,,,,,,,,,,MEDIR,2017,0,0,0,1,90
+CAJA DE SECCION,Scope Box Reorder,,,,,,,,,,,,,,,,,,,ORDENAR,2015  2016,0,1,1,0,70
+CAJA DE SECCION,Scope Box Syncronizer,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2015  2016,0,1,1,0,90
+CATEGORÍAS,Do not Plot,,,,,,,,,,,,,,,,,,,IMPRIMIR,2015  2016,0,1,1,0,80
+CATEGORÍAS,Prefilter,,,,,,,,,,,,,,,,,,,FILTRAR,2017,0,0,0,1,70
+ESTÁNDARES ENTRE MODELOS,Transfer Single Project Standard,,,,,,,,,,,,,,,,,,,COORDINAR,2017,0,0,0,1,100
+IFC,AutodeskIFC2015,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,2015,0,1,0,0,80
+MODELOS,BIMTrack Autodesk Addins.1.5.0,,,,,,,,,,,,,,,,,,,COORDINAR,2015  2016 2017,0,1,1,1,90
+PROYECTOS,Revit Model Review,,,,,,,,,,,,,,,,,,,AUDITAR,2017,0,0,0,1,100
+VISTAS,Aricad Exploded rooms,,,,,,,,,,,,,,,,,,,GENERAR,2016,0,0,1,0,90
+EXCEL,ScheduleSyncProTrial,,,,,,,,,,,,,,,,,,,IMPORTAR Y EXPORTAR,"",,,,,80
