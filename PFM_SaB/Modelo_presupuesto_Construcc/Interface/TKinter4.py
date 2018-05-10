@@ -28,41 +28,7 @@ X = train_tab.loc[:,'built_area':'OTHERS']
 knn =KNeighborsClassifier(n_neighbors=10)
 knn.fit(X,y)
 
-#K-NEIGHBORS:
-def kneighbors():
-    y_pred_kn = knn.predict(input_data)
-    Label(frame1,text= "y_pred_kn").grid(row=5,column=0)
-
-#Variables a almacenar:
-
-stds = X.loc[:,'built_area':'weeks_duration'].std()
-
-def stdscaler(i,mean_,std_): 
-    scaled = (i - mean_)/std_
-    return scaled
-
-colnames = ['built_area', 'modul_price', 'weeks_duration', 'DETACHED', 'COLLECTIVE', 'COMMERCIAL', 'OTHERS', 'DELAYED']
-predict_tab = pd.Dataframe([XXX],columns=colnames)
-input_data =[built_ar,modul_pri,weeks_dur,0,0,0,1] #Falta tipología de edif.
-built_ar = stdscaler(float(in1),means['built_area'],stds['built_area'])
-modul_pri = stdscaler(float(in2),means['modul_price'],stds['modul_price'])
-weeks_dur = stdscaler(float(in3),means['weeks_duration'],stds['weeks_duration'])
-in1 = StringVar()
-in2 = StringVar()
-in3 = StringVar()
-
-def crea_label():
-    Label(frame1,text= "wow! has clicado!").grid(row=3,column=0)
-    
-#Presentación inicial:
-#presentac = Label(root,text="""This solution is made by a professional construction manager who wants to share his knowledge. 
-#              This software will help you to get easily a second opinion about 
-#              how accurate is a construction planning and its 
-#              typical parameters.""")
-#presentac.pack(anchor="center",ipady=15)
-#presentac.config(font=(15))
-
-#Frames, marco:
+#Frames:
 frame1 = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 
                width=100, height=100, bd= 10)
@@ -71,7 +37,10 @@ frame1.grid(row=0,column=0,padx=5,pady=5)
 frame2 = Frame(root)
 frame2.grid(row=1,column=1,padx=5,pady=5)
 
-
+#Ins:
+in1 = StringVar()
+in2 = StringVar()
+in3 = StringVar()
 
 #Entradas de texto:
 entrada1_label =Label(frame1, text="inserte aquí sus numeros!")
@@ -90,15 +59,43 @@ entrada3_label.grid(row=2,column=0,sticky="w",padx=5,pady=5)
 entrada3 = Entry(frame1,justify="center",textvariable=in3)
 entrada3.grid(row=2,column=1,padx=5,pady=5)
 
-entradaResult_label =Label(frame1, text="Aquí el resultado!")
-entradaResult_label.grid(row=3,column=0,sticky="w",padx=5,pady=5)
-entradaResult= Entry(frame1,justify="center",textvariable=result)
-entradaResult.grid(row=3,column=1,padx=5,pady=5)
+# entradaResult_label =Label(frame1, text="Aquí el resultado!")
+# entradaResult_label.grid(row=3,column=0,sticky="w",padx=5,pady=5)
+# entradaResult= Entry(frame1,justify="center",textvariable=result)
+# entradaResult.grid(row=3,column=1,padx=5,pady=5)
+
+#FUNCIONES:
+def kneighbors():
+    y_pred_kn = knn.predict(input_data)
+    Label(frame1,text= "y_pred_kn").grid(row=5,column=0)
 
 
+def stdscaler(i,mean_,std_): 
+    scaled = (i - mean_)/std_
+    return scaled
+
+
+def crea_label():
+    Label(frame1,text= "wow! has clicado!").grid(row=3,column=0)
+    
+	
 #Botones:
 Button(frame1,text="púlsame",command=crea_label).grid(row=3,column=1)
 Button(frame2,text="con esto sumas",command=kneighbors).grid(row=2,column=1)
+
+#Variables a almacenar:
+	
+colnames = ['built_area', 'modul_price', 'weeks_duration', 'DETACHED', 'COLLECTIVE', 'COMMERCIAL', 'OTHERS', 'DELAYED']
+#predict_tab = pd.Dataframe([XXX],columns=colnames)
+
+
+means = X.loc[:,'built_area':'weeks_duration'].mean()
+stds = X.loc[:,'built_area':'weeks_duration'].std()
+
+built_ar = stdscaler(float(in1),means['built_area'],stds['built_area'])
+modul_pri = stdscaler(float(in2),means['modul_price'],stds['modul_price'])
+weeks_dur = stdscaler(float(in3),means['weeks_duration'],stds['weeks_duration'])
+input_data =[built_ar,modul_pri,weeks_dur,0,0,0,1] #Falta tipología de edif.
 
 
 #t1_label = Label(root)
