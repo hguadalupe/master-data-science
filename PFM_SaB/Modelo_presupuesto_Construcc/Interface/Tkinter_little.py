@@ -1,4 +1,5 @@
-#ATENCION: Para hacer funcionar este script es necesario configurar la apertura automática del formato ".pyw" con Python.exe.
+#ATENCION: Para hacer funcionar este script es necesario 
+#configurar la apertura automática del formato ".pyw" con Python.exe.
 from tkinter import *
 root = Tk()
 root.title("CBDD_By_Especialista3d.com")
@@ -24,6 +25,20 @@ train_tab = pd.read_csv(train_file)
 y = train_tab['DELAYED']
 X = train_tab.loc[:,'built_area':'OTHERS']
 
+#FUNCIONES:
+#def kneighbors():
+#    y_pred_kn = knn.predict(input_data)
+#    Label(frame1,text= "y_pred_kn").grid(row=5,column=0)
+
+
+def stdscaler(i,mean_,std_): 
+    scaled = (i - mean_)/std_
+    return scaled
+
+
+def crea_label():
+    Label(frame1,text= entrada1.get()).grid(row=4,column=0)
+  
 #Fitting:
 knn =KNeighborsClassifier(n_neighbors=10)
 knn.fit(X,y)
@@ -39,11 +54,51 @@ frame2 = Frame(root, highlightbackground="blue",
                width=100, height=100, bd= 10)
 frame2.grid(row=1,column=1,padx=5,pady=5)
 
+#Ins:
+in1 = DoubleVar()
+in2 = DoubleVar()
+in3 = DoubleVar()
+
+#Entradas de texto:
+entrada1_label =Label(frame1, text="inserte aquí sus numeros!")
+entrada1_label.grid(row=0,column=0,sticky="w",padx=5,pady=5)
+entrada1 = Entry(frame1,justify="center",textvariable=in1)
+entrada1.grid(row=0,column=1,padx=5,pady=5)
+
+
+entrada2_label =Label(frame1, text="inserte aquí más números")
+entrada2_label.grid(row=1,column=0,sticky="w",padx=5,pady=5)
+entrada2 = Entry(frame1,justify="center",textvariable=in2)
+entrada2.grid(row=1,column=1,padx=5,pady=5)
+
+entrada3_label =Label(frame1, text="inserte aquí más números")
+entrada3_label.grid(row=2,column=0,sticky="w",padx=5,pady=5)
+entrada3 = Entry(frame1,justify="center",textvariable=in3)
+entrada3.grid(row=2,column=1,padx=5,pady=5)
+
+#Botones:
+Button(frame1,text="púlsame",command=crea_label).grid(row=3,column=1)
+Button(frame1,text="con esto sumas",command=entrada1.get()).grid(row=3,column=0)
+
+#Variables de cálculo:
+means = X.loc[:,'built_area':'weeks_duration'].mean()
+stds = X.loc[:,'built_area':'weeks_duration'].std()
+
+
+#Esto hay que meterlo en una función. Acabarás anidando funciones dentro de funciones.
+#Pero merece la pena, porque no debes de confiar en el orden del script.
+built_ar = stdscaler(np.float32(float(ent1)) ,np.float32(means['built_area']),np.float32(stds['built_area']))
+#modul_pri = stdscaler(entrada2.get(),means['modul_price'],stds['modul_price'])
+#weeks_dur = stdscaler(entrada3.get(),means['weeks_duration'],stds['weeks_duration'])
+#input_data =[built_ar,modul_pri,weeks_dur,0,0,0,1] #Falta tipología de edif.
+
+ent1 = entrada1.get()
+entrada1.set(ent1)
 
 # -----------------------------------------------------
 # -----------------------------------------------------
 
-Label(frame2,text= y.head(5)).grid(row=0,column=0)
+Label(frame2,text= built_ar).grid(row=0,column=0)
 
 # -----------------------------------------------------
 # -----------------------------------------------------

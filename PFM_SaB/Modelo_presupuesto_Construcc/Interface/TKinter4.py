@@ -38,9 +38,9 @@ frame2 = Frame(root)
 frame2.grid(row=1,column=1,padx=5,pady=5)
 
 #Ins:
-in1 = StringVar()
-in2 = StringVar()
-in3 = StringVar()
+in1 = FloatVar()
+in2 = FloatVar()
+in3 = FloatVar()
 
 #Entradas de texto:
 entrada1_label =Label(frame1, text="inserte aquí sus numeros!")
