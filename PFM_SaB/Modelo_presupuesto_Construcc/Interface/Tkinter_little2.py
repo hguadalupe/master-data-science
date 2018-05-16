@@ -36,13 +36,15 @@ stds=stds.rename(columns = {'index':'built_area'})
 
 def report():
 	kneighbors_prediction = kneighbors()
-	mebox.showinfo("REPORT",[kneighbors_prediction,"weqwe"])
+	logreg_prediction = logreg()
+	randfor_prediction = randfor()
+	mebox.showinfo("REPORT",[kneighbors_prediction,logreg_prediction,randfor_prediction])
 
 def kneighbors():
 	scaled = scaler()
+	typo = typology()
 	knn =KNeighborsClassifier(n_neighbors=10)
 	knn.fit(X,y)	
-	typo = typology()
 	pre_predict_args = scaled + typo 
 	prediction = np.asarray(pre_predict_args).reshape(1,-1)
 	y_pred_kn= knn.predict(prediction)
@@ -50,6 +52,28 @@ def kneighbors():
 	return answer
 	#in5.set(y_pred_kn)    
 	#Label(frame3,text= answer).grid(row=5,column=0)
+
+def logreg():
+	scaled = scaler()
+	typo = typology()
+	logreg = LogisticRegression()
+	logreg.fit(X,y)	
+	pre_predict_args = scaled + typo 
+	prediction = np.asarray(pre_predict_args).reshape(1,-1)
+	y_pred_lg= logreg.predict(prediction)
+	answer = answerer(y_pred_lg)
+	return answer
+	
+def randfor():
+	scaled = scaler()
+	typo = typology()
+	randforest = RandomForestClassifier(max_depth=2, random_state=0)
+	randforest.fit(X, y)
+	pre_predict_args = scaled + typo 
+	prediction = np.asarray(pre_predict_args).reshape(1,-1)
+	y_pred_rf= randforest.predict(prediction)
+	answer = answerer(y_pred_rf)
+	return answer
 
 def typology():
 	if in6.get() == 0:
