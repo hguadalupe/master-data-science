@@ -21,10 +21,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
 #Load DBs:
-train_file = "../Data/prototrain_CSV"
-train_tab = pd.read_csv(train_file)
-y = train_tab['DELAYED']
-X = train_tab.loc[:,'built_area':'OTHERS']
+xtrain_file = "../Data/Xprototrain_CSV"
+ytrain_file = "../Data/yprototrain_CSV"
+X = pd.read_csv(xtrain_file)
+y = pd.read_csv(ytrain_file)
+y = y['DELAYED']
+X = X.loc[:,'built_area':'OTHERS']
 
 #Importamos unas tablas preparadas para escalar (medias y std):
 means = pd.read_csv("../Data/protomean_CSV",index_col=0).T.reset_index()
@@ -43,28 +45,55 @@ randforest.fit(X, y)
 #FUNCIONES:
 
 def report():
-	kneighbors_prediction = kneighbors()
-	logreg_prediction = logreg()
-	randfor_prediction = randfor()
-	mebox.showinfo("REPORT",[kneighbors_prediction,logreg_prediction,randfor_prediction])
-
+	voting_result = voting()
+	threshold =1.5
+	response = []
+	if voting_result < threshold:
+		response.append(1)
+	else:
+		response.append(0)
+		
+	mebox.showinfo("REPORT",scaler())
+	
+def voting():
+	kneighbors_prediction = str(kneighbors())
+	logreg_prediction =  str(logreg())
+	randfor_prediction =  str(randfor())
+	voting_result = 0
+	
+	if kneighbors_prediction == [1]:
+		threshold +=1.5
+	else:
+		pass
+	if logreg_prediction == [1]:
+		threshold +=0.74
+	else:
+		pass
+	if randfor_prediction == [1]:
+		threshold +=0.74
+	else:
+		pass
+		
+		return voting_result
+	
 def kneighbors():
 	scaled = scaler()
 	typo = typology()
 	pre_predict_args = scaled + typo 
 	prediction = np.asarray(pre_predict_args).reshape(1,-1)
 	y_pred_kn= knn.predict(prediction)
-	answer = answerer(y_pred_kn)
-	return answer
+	y_pred_kn
+	return y_pred_kn
 
 def logreg():
 	scaled = scaler()
-	typo = typology()	
+	typo = typology()
+	logreg = LogisticRegression()
+	logreg.fit(X,y)		
 	pre_predict_args = scaled + typo 
 	prediction = np.asarray(pre_predict_args).reshape(1,-1)
 	y_pred_lg= logreg.predict(prediction)
-	answer = answerer(y_pred_lg)
-	return answer
+	return y_pred_lg
 	
 def randfor():
 	scaled = scaler()
@@ -72,8 +101,7 @@ def randfor():
 	pre_predict_args = scaled + typo 
 	prediction = np.asarray(pre_predict_args).reshape(1,-1)
 	y_pred_rf= randforest.predict(prediction)
-	answer = answerer(y_pred_rf)
-	return answer
+	return y_pred_rf
 
 def typology():
 	if in6.get() == 0:
@@ -105,14 +133,7 @@ def uniqscaler(float_,mean_,std_):
 	uniqscaled = (float_ - mean_)/std_
 	return uniqscaled
 	
-def answerer(a):
-	if a == [1]:
-		return "yeah"
-	else:
-		return "nope"
 	
-	
-
 #Frames:
 frame1 = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 

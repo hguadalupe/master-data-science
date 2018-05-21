@@ -61,6 +61,8 @@ def logreg():
 	scaled = scaler()
 	typo = typology()	
 	pre_predict_args = scaled + typo 
+	logreg = LogisticRegression()
+	logreg.fit(X,y)
 	prediction = np.asarray(pre_predict_args).reshape(1,-1)
 	y_pred_lg= logreg.predict(prediction)
 	answer = answerer(y_pred_lg)
@@ -95,9 +97,9 @@ def resting():
 	Label(frame3,text= totalsum).grid(row=1,column=0)
 	
 def scaler(): 
-	ba_scaled = uniqscaler(float(entrada1.get()),float(means['built_area']),float(stds['built_area']))
-	mp_scaled = uniqscaler(float(entrada2.get()),float(means['modul_price']),float(stds['modul_price']))
-	wd_scaled = uniqscaler(float(entrada3.get()),float(means['weeks_duration']),float(stds['weeks_duration']))	
+	ba_scaled = float(entrada1.get())
+	mp_scaled = float(entrada2.get())
+	wd_scaled = float(entrada3.get())	
 	scaled =[ba_scaled,mp_scaled,wd_scaled]
 	return scaled
 
