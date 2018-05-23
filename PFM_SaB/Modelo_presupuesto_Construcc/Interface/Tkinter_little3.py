@@ -59,7 +59,7 @@ def voting():
 	kneighbors_prediction = str(kneighbors())
 	logreg_prediction =  str(logreg())
 	randfor_prediction =  str(randfor())
-	voting_result = 0
+	voting_result = 0 # NO SERIA THERSHOLD????
 	
 	if kneighbors_prediction == [1]:
 		threshold +=1.5
