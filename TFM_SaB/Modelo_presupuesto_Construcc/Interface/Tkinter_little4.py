@@ -192,6 +192,10 @@ Radiobutton(frame_typology,text="OTHERS", variable= in6,value=3).grid(row=7,colu
 # means = X.loc[:,'built_area':'weeks_duration'].mean()
 # stds = X.loc[:,'built_area':'weeks_duration'].std()
 
+#"""This solution is made by a professional construction manager who wants to share his knowledge. 
+              # This software will help you to get easily a second opinion about 
+              # how accurate is a construction planning and its 
+              # typical parameters."""
 
 #Esto hay que meterlo en una función. Acabarás anidando funciones dentro de funciones.
 #Pero merece la pena, porque no debes de confiar en el orden del script.
