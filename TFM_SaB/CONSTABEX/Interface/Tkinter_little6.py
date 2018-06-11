@@ -39,24 +39,23 @@ randforest.fit(X_train, y_train)
 
 #FUNCIONES:
 
-
-
 def report():
 	voting_result = voting()
 	threshold =0.3
-
-	#---Debugging
-	y_pred_kn =kneighbors()[0]
-	y_pred_lg=logreg()[0]
-	y_pred_rf=randfor()[0]
-	#---Debugging
+	yeswords = ["Whoops! It looks like a typical delayed project!\n", "I also think the team will suffer delays with that budget.\n","Me too! Somebody should have some words with whoever is responsible of planning.\n"]
+	nowords=["Well, I don't see problems at all with this project.\n", "It looks fine to me.\n", "Everithing OK! It seems like a some construction manager has done a good planning job!\n"]
+	team={'kanye':kneighbors()[0],'logreg':logreg()[0],'Randfor':randfor()[0]}
+	
+	wordstonums_ = wordstonums(team,nowords,yeswords)
+		
 	if voting_result >= threshold:
-		result = "POSSIBLE DELAY DETECTED. \n You should consider a higher investment in production resources or maybe wider time limit."
+		result = "   POSSIBLE DELAY DETECTED. \nYou should consider a higher investment in production resources or maybe wider time limits."
 	else:
-		result = "GOOD PLANNING! \n It seems everithing is OK with the project and its planning deadlines."
+		result = "   GOOD PLANNING! \nIt seems everithing is OK with the project and its planning deadlines."
 	
+	infomess = result + '\nThree expert algorithms intervened in this problem having a deep discussion: \n Someone said:' + wordstonums_[0]
 	
-	mebox.showinfo("REPORT",[result,voting(), y_pred_kn, y_pred_lg,y_pred_rf ])
+	mebox.showinfo("REPORT", infomess )
 	
 def voting():
 	predictions = [kneighbors(),logreg(), randfor()]
@@ -133,6 +132,19 @@ def uniqscaler(float_,mean_,std_):
 	uniqscaled = (float_ - mean_)/std_
 	return uniqscaled
 	
+def wordstonums(dicti,nowords,yeswords):
+    a =[]
+    n=0
+    m=0
+    for i in dicti.values():
+        if i == 0:
+            a.append(nowords[n])
+            n+=1
+        else:
+            a.append(yeswords[m])
+            m+=1
+    return a
+
 	
 #Frames:
 
