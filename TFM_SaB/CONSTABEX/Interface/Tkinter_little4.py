@@ -3,7 +3,7 @@
 from tkinter import *
 from tkinter import messagebox as mebox
 root = Tk()
-root.title("CBDD_By_Especialista3d.com")
+root.title("CONSTADEX (CC By Especialista3d.com)")
 
 import pandas as pd
 import random as rnd
@@ -132,10 +132,16 @@ def uniqscaler(float_,mean_,std_):
 	
 	
 #Frames:
+
+frame0 = Frame(root,
+               highlightcolor="red", highlightthickness=1, 
+               width=100, height=100, bd=10)
+frame0.grid(row=0,column=0,padx=5,pady=5)
+
 frame1 = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 
                width=100, height=100, bd= 10)
-frame1.grid(row=0,column=0,padx=5,pady=5)
+frame1.grid(row=1,column=1,padx=5,pady=5)
 
 frame_typology = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 
@@ -145,12 +151,11 @@ frame_typology .grid(row=1,column=0,padx=5,pady=5,sticky="w")
 frame2 = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 
                width=100, height=100, bd= 10)
-frame2.grid(row=2,column=1,padx=5,pady=5)
+frame2.grid(row=3,column=1,padx=5,pady=5)
 
-frame3 = Frame(root, highlightbackground="blue", 
-               highlightcolor="red", highlightthickness=1, 
+frame3 = Frame(root, 
                width=100, height=100, bd= 10)
-frame3.grid(row=2,column=0,padx=5,pady=5)
+frame3.grid(row=3,column=0,padx=5,pady=5)
 
 #Ins:
 in1 = DoubleVar()
@@ -161,27 +166,39 @@ in5 = DoubleVar()
 in6 = IntVar()
 
 #Entradas de texto:
-entrada1_label =Label(frame1, text="Gross floor area of the building project")
-entrada1_label.grid(row=0,column=0,sticky="w",padx=5,pady=5)
-entrada1 = Entry(frame1,justify="center",textvariable=in1)
-entrada1.grid(row=0,column=1,padx=5,pady=5)
+entrada0_label =Label(frame0, text="CONSTADEX", font=("Helvetica", 18))
+entrada0_label.grid(row=0,column=0,sticky="w",padx=5,pady=5)
 
+entrada00_label =Label(frame0, text="~~CONSTRUCTION AUTOMATIC DELAY EXPERT~~", font=("Helvetica", 10))
+entrada00_label.grid(row=1,column=0,sticky="w",padx=5,pady=5)
+
+entrada10_label =Label(frame1, text="CONSTRUCTION PARAMETERS:")
+entrada10_label.grid(row=0,column=0,sticky="w",padx=5,pady=5)
+
+entrada1_label =Label(frame1, text="Gross floor area of the building project")
+entrada1_label.grid(row=1,column=0,sticky="w",padx=5,pady=5)
+entrada1 = Entry(frame1,justify="center",textvariable=in1)
+entrada1.grid(row=1,column=1,padx=5,pady=5)
 
 entrada2_label =Label(frame1, text="Estimated construction cost per squared meter")
-entrada2_label.grid(row=1,column=0,sticky="w",padx=5,pady=5)
+entrada2_label.grid(row=2,column=0,sticky="w",padx=5,pady=5)
 entrada2 = Entry(frame1,justify="center",textvariable=in2)
-entrada2.grid(row=1,column=1,padx=5,pady=5)
+entrada2.grid(row=2,column=1,padx=5,pady=5)
 
 entrada3_label =Label(frame1, text="Construction duration estimated in weeks")
-entrada3_label.grid(row=2,column=0,sticky="w",padx=5,pady=5)
+entrada3_label.grid(row=3,column=0,sticky="w",padx=5,pady=5)
 entrada3 = Entry(frame1,justify="center",textvariable=in3)
-entrada3.grid(row=2,column=1,padx=5,pady=5)
+entrada3.grid(row=3,column=1,padx=5,pady=5)
 
-tipology_label = Label(frame_typology, text="Please, select the typology of the building:")
-tipology_label.grid(row=3,column=0,sticky="w",padx=5,pady=5)
+entrada4_label =Label(frame3, text="This solution is made by a professional construction manager who wants to share his knowledge. This software will help you to get easily a second opinion about how accurate is a construction planning and its typical parameters.", 
+					anchor = "w" , wraplength= 400,font=("Helvetica", 8))
+entrada4_label.grid(row=0,column=0,sticky="e",padx=5,pady=5)
+
+tipology_label = Label(frame_typology, text="TYPOLOGY. Please, select the typology of the building:")
+tipology_label.grid(row=3,column=0,padx=5,pady=5)
 
 # #Botones:
-Button(frame2,text="con esto escalamos",command=report).grid(row=0,column=0,sticky="w")
+Button(frame2,text="CHECK DELAY",command=report).grid(row=0,column=0,sticky="w")
 Radiobutton(frame_typology,text="DETACHED HOUSING", variable= in6,value=0).grid(row=4,column=1,sticky="w")
 Radiobutton(frame_typology,text="COLLECTIVE HOUSING", variable= in6,value=1).grid(row=5,column=1,sticky="w")
 Radiobutton(frame_typology,text="COMMERCIAL", variable= in6,value=2).grid(row=6,column=1,sticky="w")
