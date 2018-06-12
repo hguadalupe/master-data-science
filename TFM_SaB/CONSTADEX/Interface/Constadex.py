@@ -1,9 +1,12 @@
+### By Especialista3d.com.
+
 #ATENCION: Para hacer funcionar este script es necesario 
 #configurar la apertura automática del formato ".pyw" con Python.exe.
 from tkinter import *
 from tkinter import messagebox as mebox
 root = Tk()
 root.title("CONSTADEX (CC By Especialista3d.com)")
+root.iconbitmap('favicon.ico')
 
 import pandas as pd
 import random as rnd
@@ -39,24 +42,25 @@ randforest.fit(X_train, y_train)
 
 #FUNCIONES:
 
-
-
 def report():
 	voting_result = voting()
-	threshold =0.3
-
-	#---Debugging
-	y_pred_kn =kneighbors()[0]
-	y_pred_lg=logreg()[0]
-	y_pred_rf=randfor()[0]
-	#---Debugging
-	if voting_result >= threshold:
-		result = "POSSIBLE DELAY DETECTED. \n You should consider a higher investment in production resources or maybe wider time limit."
+	threshold =0.33
+	yeswords = ["Whoops! It looks like a typical delayed project! Or maybe its cost is not optimal...\n", "I also think the team will suffer delays with that budget.\n","Me too! Somebody should have some words with whoever is responsible for contracting and planning.\n"]
+	nowords=["Well, I don't see problems at all with this project.\n", "It looks fine to me.\n", "Everithing OK! It seems like a some construction manager has done a good planning job!\n"]
+	team={'kanye':kneighbors()[0],'logreg':logreg()[0],'Randfor':randfor()[0]}
+	
+	wordstonums_ = wordstonums(team,nowords,yeswords)
+		
+	if voting_result > threshold:
+		result = "   POSSIBLE DELAY DETECTED. \n\n   You should consider a higher investment in production resources or maybe wider time limits."
+		conclussion = "\n\n   So they resolved that the project should be studied to see if there is an alternative budget o construction plan."
 	else:
-		result = "GOOD PLANNING! \n It seems everithing is OK with the project and its planning deadlines."
+		result = "   GOOD PLANNING! \n\n   It seems everithing is OK with the project and its planning deadlines."
+		conclussion = "\n\n   So they resloved to say that the project could go on with its planning and budget."
+		
+	infomess = result + '\n\n   Three expert algorithms, Kanye, Logreg and Randfor, intervened in this problem having a deep discussion: \n   This is what they said:\n\n - KANYE: ' + wordstonums_[0] + '\n - LOGREG: ' + wordstonums_[1] + '\n - RANDFOR: ' + wordstonums_[2] + conclussion
 	
-	
-	mebox.showinfo("REPORT",[result,voting(), y_pred_kn, y_pred_lg,y_pred_rf ])
+	mebox.showinfo("REPORT", infomess )
 	
 def voting():
 	predictions = [kneighbors(),logreg(), randfor()]
@@ -113,7 +117,7 @@ def summing():
 	Label(frame3,text= totalsum).grid(row=2,column=0)
 
 def resting():
-	totalsum = float(entrada1.get()) - float(entrada3.get()) -float(entrada2.get())
+	totalsum = float(entrada1.get()) - float(entrada3.get()) - float(entrada2.get())
 	Label(frame3,text= totalsum).grid(row=1,column=0)
 	
 def scaler(): 
@@ -133,13 +137,31 @@ def uniqscaler(float_,mean_,std_):
 	uniqscaled = (float_ - mean_)/std_
 	return uniqscaled
 	
-	
+def wordstonums(dicti,nowords,yeswords):
+    a =[]
+    n=0
+    m=0
+    for i in dicti.values():
+        if i == 0:
+            a.append(nowords[n])
+            n+=1
+        else:
+            a.append(yeswords[m])
+            m+=1
+    return a
+
+
 #Frames:
 
 frame0 = Frame(root,
                highlightcolor="red", highlightthickness=1, 
                width=100, height=100, bd=10)
 frame0.grid(row=0,column=0,padx=5,pady=5)
+
+frameicon = Frame(root,
+               highlightcolor="red", highlightthickness=1, 
+               width=100, height=100, bd=10)
+frameicon.grid(row=0,column=1,padx=5,pady=5)
 
 frame1 = Frame(root, highlightbackground="blue", 
                highlightcolor="red", highlightthickness=1, 
@@ -167,6 +189,12 @@ in3 = DoubleVar()
 in4 = DoubleVar()
 in5 = DoubleVar()
 in6 = IntVar()
+
+#Image:
+photo = PhotoImage(file='bot.gif')
+w = Label(frameicon, image=photo)
+w.grid(row=0,column=0,sticky="w",padx=5,pady=5)
+
 
 #Entradas de texto:
 entrada0_label =Label(frame0, text="CONSTADEX", font=("Helvetica", 18))
