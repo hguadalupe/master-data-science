@@ -49,7 +49,7 @@ Data compilation, plotting and expert analysis using:
 - Matplotlib.  
 - Plotly.  
 - Pyplot.  
-- Seaborn.  
+- Seaborn.<br/>
 For predictive analysis we have used three different tools that, used together, will help to both reduce overfitting and take advantage of local fenomena. Supervised Machine Learning Algorithms used (by SciKit Learn):  
 - Logistic Regression.  
 - Random Forest.  
