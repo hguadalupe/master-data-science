@@ -1,0 +1,30 @@
+#Para crear Clase
+
+class MyClass:
+    def __init__(self, name, lon,lat):
+        self.name = name
+        self.lon= lon
+        self.lat= lat
+        
+        
+props =[1,2,3]
+
+#Para crear objetos seriadamente
+
+objectNames = list(range(0,100))
+objectDictionary = {}
+
+for name in objectNames:
+    objectDictionary[name] = MyClass("coco",1,2)
+
+
+
+objectDictionary[99].lon
+
+#Para llamar seriadamente a cada valor del diccionario (y hacer tus listas para DF): 
+
+numeros = []
+for n in objectNames:
+    numeros.append(objectDictionary[n].lon)    
+
+numeros
